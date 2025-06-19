@@ -1,3 +1,6 @@
+
+//Задание 2
+
 public class checkSumSign {
     public static void checkSumSign () {
         int a = 5;
@@ -9,6 +12,7 @@ public class checkSumSign {
             System.out.println("Сумма отрицательная");
         }
     }
+
 
     public static void main(String[] args) {
         checkSumSign();

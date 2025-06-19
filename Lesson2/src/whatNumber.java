@@ -1,3 +1,6 @@
+
+//Задание 6
+
 public class whatNumber {
     public static void whatNumber (int a) {
        if (a >= 0) {

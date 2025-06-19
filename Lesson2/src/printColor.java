@@ -1,3 +1,6 @@
+
+//Задание 3
+
 public class printColor {
     public static void printColor () {
         int value = 85;

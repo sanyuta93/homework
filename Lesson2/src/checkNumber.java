@@ -1,3 +1,6 @@
+
+//Задание 7
+
 public class checkNumber {
     public static boolean checkNumber (int a) {
         if (a<0) {

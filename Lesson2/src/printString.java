@@ -1,4 +1,9 @@
+
+//Задание 8
+
+
 public class printString {
+
     public static void printString (String text, int a) {
 
         for (int i = 0; i < a; i++) {
