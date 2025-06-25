@@ -52,7 +52,7 @@ public class Park {
         Attraction attraction1 = new Attraction("Waltz", "10:00 - 20:00", 5.5);
         Attraction attraction2 = new Attraction("Ferris Wheel", "09:00 - 22:00", 8.0);
 
-        // Выводим информацию о них
+        
         System.out.println(attraction1);
         System.out.println(attraction2);
     }
