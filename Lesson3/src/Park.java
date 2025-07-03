@@ -45,15 +45,4 @@ public class Park {
                     ", Price: " + price + " USD";
         }
     }
-
-
-    public static void main(String[] args) {
-
-        Attraction attraction1 = new Attraction("Waltz", "10:00 - 20:00", 5.5);
-        Attraction attraction2 = new Attraction("Ferris Wheel", "09:00 - 22:00", 8.0);
-
-        
-        System.out.println(attraction1);
-        System.out.println(attraction2);
-    }
 }
