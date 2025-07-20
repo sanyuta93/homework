@@ -1,8 +1,7 @@
-package org.example.tests;
-
 import org.example.ArithmeticOperations;
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+
+import static org.testng.Assert.assertEquals;
 
 public class ArithmeticOperationsTests {
 

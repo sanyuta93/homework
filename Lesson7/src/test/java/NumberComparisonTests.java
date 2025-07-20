@@ -1,8 +1,7 @@
-package org.example.tests;
-
 import org.example.NumberComparison;
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 public class NumberComparisonTests {
 

@@ -1,5 +1,3 @@
-package org.example.tests;
-
 import org.example.FactorialCalculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
