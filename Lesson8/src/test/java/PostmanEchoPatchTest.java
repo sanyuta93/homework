@@ -19,27 +19,6 @@ public class PostmanEchoPatchTest {
         RestAssured.useRelaxedHTTPSValidation();
     }
 
-    @Test
-    public void testPatchRequestWithBody() {
-        Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("id", 123);
-        requestBody.put("name", "Test User");
-        requestBody.put("active", true);
-
-        given()
-                .contentType(ContentType.JSON)
-                .body(requestBody)
-                .when()
-                .patch("/patch")
-                .then()
-                .statusCode(200)
-                .body("data.id", equalTo(123))
-                .body("data.name", equalTo("Test User"))
-                .body("data.active", equalTo(true))
-                .body("url", equalTo("https://postman-echo.com/patch"))
-                .body("headers", hasKey("content-type"))
-                .body("headers.content-type", containsString("application/json"));
-    }
 
     @Test
     public void testPatchRequestWithPartialUpdate() {

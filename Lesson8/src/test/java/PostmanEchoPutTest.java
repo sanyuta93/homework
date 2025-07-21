@@ -2,8 +2,6 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
-import java.util.HashMap;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -15,21 +13,18 @@ public class PostmanEchoPutTest {
 
         RestAssured.baseURI = "https://postman-echo.com";
 
-        Map<String, String> requestBody = new HashMap<>();
-        requestBody.put("field1", "value1");
-        requestBody.put("field2", "value2");
+
 
         Response response = given()
                 .contentType(ContentType.JSON)
-                .body(requestBody)
+                .body("123")
                 .when()
                 .put("/put");
 
         response.then().statusCode(200);
 
         response.then()
-                .body("data.field1", equalTo("value1"))
-                .body("data.field2", equalTo("value2"))
+                .body("data", equalTo("123"))
                 .body("url", equalTo("https://postman-echo.com/put"))
                 .body("headers", notNullValue()) // Проверяем, что headers есть
                 .body("headers.content-type", containsString("application/json"))

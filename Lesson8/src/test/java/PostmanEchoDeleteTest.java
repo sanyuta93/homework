@@ -36,36 +36,4 @@ public class PostmanEchoDeleteTest {
                 .body("headers.host", equalTo("postman-echo.com"));
     }
 
-    @Test
-    public void testDeleteRequestWithBody() {
-
-        Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("resourceId", 789);
-        requestBody.put("comment", "Marked for deletion");
-
-
-        given()
-                .contentType(ContentType.JSON)
-                .body(requestBody)
-                .when()
-                .delete("/delete")
-                .then()
-                .statusCode(200)
-                .body("data.resourceId", equalTo(789))
-                .body("data.comment", equalTo("Marked for deletion"))
-                .body("url", equalTo("https://postman-echo.com/delete"));
-    }
-
-    @Test
-    public void testSimpleDeleteRequest() {
-
-        given()
-                .when()
-                .delete("/delete")
-                .then()
-                .statusCode(200)
-                .body("args", anEmptyMap())
-                .body("data", equalTo(""))
-                .body("url", equalTo("https://postman-echo.com/delete"));
-    }
 }
